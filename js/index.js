@@ -42,8 +42,9 @@ function renderPepperoni() {
   });
 }
 
+// Iteration 1: set the visibility of `<section class="mushroom">`
 function renderMushrooms() {
-  // Iteration 1: set the visibility of `<section class="mushroom">`
+ 
   document.querySelectorAll(".mushroom").forEach((mush) => {
     if (state.mushrooms) {
       mush.style.visibility = "visible";
@@ -53,19 +54,21 @@ function renderMushrooms() {
   });
 }
 
+// Iteration 1: set the visibility of `<section class="green-pepper">`
 function renderGreenPeppers() {
-  // Iteration 1: set the visibility of `<section class="green-pepper">`
-  document.querySelectorAll(".green-pepper").forEach((mush) => {
+  document.querySelectorAll('.green-pepper').forEach((oneGreenPep) => {
+    // This is flag from state
     if (state.greenPeppers) {
-      mush.style.visibility = "visible";
+      oneGreenPep.style.visibility = 'visible';
     } else {
-      mush.style.visibility = "hidden";
+      oneGreenPep.style.visibility = 'hidden';
     }
   });
 }
 
+// Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
 function renderWhiteSauce() {
-  // Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
+  
   if (state.whiteSauce) {
     document.querySelector("section.sauce").classList.remove("sauce-white");
   } else {
@@ -99,6 +102,7 @@ function renderButtons() {
 }
 
 function renderPrice() {
+  let total = basePrice;
   // Iteration 4: change the HTML of `<aside class="panel price">`
   let totalPrice = basePrice;
 
